@@ -30,4 +30,8 @@ export class FacturaService {
   create(factura: Factura): Observable<Factura> {
     return this.http.post<Factura>(this.urlEndPoint, factura);
   }
+  getFacturas(): Observable<Factura[]> {
+    return this.http.get<Factura[]>(this.urlEndPoint);
+  }
+  
 }
